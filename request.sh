@@ -36,4 +36,4 @@ stripeApiBaseUrl='https://api.stripe.com/v1'
   do
     echo "-d $stripeKeyValue"
   done
-} | xargs curl --request "$httpMethod"
+} | xargs curl --silent --show-error --request "$httpMethod"

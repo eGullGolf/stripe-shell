@@ -47,7 +47,7 @@ where the folder name matches the name of the endpoint, and the
 script name reflects the nature of the operation:
 
 * `create.sh`
-* `read.sh`
+* `read.sh` (single value) or `get.sh` (an item in a collection)
 * `update.sh`
 * `delete.sh`
 * `list.sh`

@@ -9,7 +9,7 @@
 #   newly created account object, in JSON format
 #
 # References:
-# [1] Stripe API > Connect > Create an account
+# [1] Stripe API > Connect > Account > Create an account
 # https://stripe.com/docs/api#create_account
 
 # [2] Stripe Docs > Deferred Account Activation > Creating a standalone account

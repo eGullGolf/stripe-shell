@@ -20,3 +20,7 @@ properties defined in configuration files loaded before. You could
 for example define your production API key in `/etc/stripe-shell/config.sh`
 and your test development key in `custom.my.sh`.
 
+# Requirements
+
+This software uses [cUrl](https://curl.haxx.se/) utility to issue requests.
+It is commonly found already installed on Unix systems.

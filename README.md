@@ -28,3 +28,40 @@ Settings of your Stripe dashboard.
 
 This software uses [cUrl](https://curl.haxx.se/) utility to issue requests.
 It is commonly found already installed on Unix systems.
+
+# Usage
+
+After having completed the configuration and checked the requirements,
+you can send any request using the generic script `request.sh` at the root
+of the project.
+
+The script takes as input two parameters or more:
+
+* the HTTP method (`GET`, `POST`, `DELETE`, ...)
+* the name of the API endpoint (`balance`, `charges`, ...)
+* optionally, a list of parameters for the API endpoint,
+  of the form name='value', where the value is URL-encoded
+
+Alternatively, specific scripts are available for select endpoints,
+where the folder name matches the name of the endpoint, and the
+script name reflects the nature of the operation:
+
+* `create.sh`
+* `read.sh`
+* `update.sh`
+* `delete.sh`
+* `list.sh`
+* ...
+
+For example, to check the current balance of the account,
+a generic request can be sent with `request.sh`:
+
+```
+$ ./request.sh GET balance
+```
+
+or a specific request can be used, found in the `balance` folder:
+
+```
+$ ./balance/read.sh
+```

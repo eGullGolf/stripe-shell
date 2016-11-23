@@ -13,12 +13,16 @@ in given order:
 * `config.my.sh` - custom parameters
   (local file, ignored by git)
 
-Only the first file is mandatory; when no custom API key is provided,
-the test API key found in Stripe documentation is used by default.
 Properties defined in configuration files loaded after supersede
 properties defined in configuration files loaded before. You could
 for example define your production API key in `/etc/stripe-shell/config.sh`
 and your test key in `custom.my.sh`, for use during development.
+
+The default `config.sh` gives an empty value to the secret API key,
+which prevents requests, to make sure that a custom key is configured.
+A value must be set to the `stripeSecretKey` property in one of the
+custom configuration files. The API keys can be found in the Account
+Settings of your Stripe dashboard.
 
 # Requirements
 

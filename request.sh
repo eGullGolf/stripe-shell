@@ -19,6 +19,12 @@ then
   exit 1
 fi
 
+if test -z "$stripeSecretKey"
+then
+  echo "Error: the stripeSecretKey must be configured." 1>&2
+  exit 2
+fi
+
 stripeApiBaseUrl='https://api.stripe.com/v1'
 
 {

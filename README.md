@@ -16,5 +16,7 @@ in given order:
 Only the first file is mandatory; when no custom API key is provided,
 the test API key found in Stripe documentation is used by default.
 Properties defined in configuration files loaded after supersede
-properties defined in configuration files loaded before.
+properties defined in configuration files loaded before. You could
+for example define your production API key in `/etc/stripe-shell/config.sh`
+and your test development key in `custom.my.sh`.
 

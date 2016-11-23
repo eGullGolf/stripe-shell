@@ -4,6 +4,10 @@
 # Parameter:
 #   id - string, the identifier of the balance transaction
 #
+# Reference:
+# [1] Stripe API > Core Resources > Balance > Retrieve a balance transaction
+# https://stripe.com/docs/api/curl#retrieve_balance_transaction
+#
 cd "$(dirname "$0")"
 
 stripeTransactionId="${1#id=}"

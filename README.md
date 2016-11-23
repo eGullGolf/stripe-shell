@@ -65,3 +65,5 @@ or a specific request can be used, found in the `balance` folder:
 ```
 $ ./balance/read.sh
 ```
+
+Arguments for the API endpoint are provided in the same format in both cases.

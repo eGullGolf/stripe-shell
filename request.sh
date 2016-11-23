@@ -4,7 +4,7 @@
 # Parameters:
 #   $1 - string, name of the HTTP method: 'GET', 'POST', 'DELETE',...
 #   $2 - string, name of the API end-point
-#   ... - API parameters in the form param='value',
+#   ... - API parameters in the form name='value',
 #         where the value is URL-encoded and quoted if needed for safety
 #
 cd "$(dirname "$0")"

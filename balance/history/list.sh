@@ -2,8 +2,7 @@
 # List all balance history
 #
 # Parameter:
-#   limit - optional, integer, the maximum number of items to return,
-#           between 1 and 100, defaults to 10.
+#   ... - see [1] for the list of optional parameters
 #
 # Reference:
 # [1] Stripe API > Core Resources > Balance > List all balance history

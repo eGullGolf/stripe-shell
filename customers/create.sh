@@ -13,4 +13,4 @@
 #
 cd "$(dirname "$0")"
 
-../request.sh POST customers
+../request.sh POST customers $*

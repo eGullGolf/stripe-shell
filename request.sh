@@ -7,6 +7,14 @@
 #   ... - API parameters in the form name='value',
 #         where the value is URL-encoded and quoted if needed for safety
 #
+# Environment:
+#   stripeConnectAs - string, identifier of a connected merchant account,
+#                     to send an API request on its behalf; see [1].
+#
+# Reference:
+# [1] Stripe Docs > Connect > Authentication with Connect
+# https://stripe.com/docs/connect/authentication
+#
 cd "$(dirname "$0")"
 
 . ./config.sh
@@ -30,6 +38,11 @@ stripeApiBaseUrl='https://api.stripe.com/v1'
 {
   echo "$stripeApiBaseUrl/$stripeApiName"
   echo "-u '$stripeSecretKey:'"
+
+  if test -n "$stripeConnectAs"
+  then
+    echo "-H 'Stripe-Account: $stripeConnectAs'"
+  fi
 
   shift 2
   for stripeKeyValue in $*

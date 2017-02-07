@@ -20,4 +20,4 @@
 #
 cd "$(dirname "$0")"
 
-../request.sh POST tokens $*
+../request.sh POST tokens "$@"

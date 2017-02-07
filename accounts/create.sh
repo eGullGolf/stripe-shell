@@ -17,4 +17,4 @@
 #
 cd "$(dirname "$0")"
 
-../request.sh POST accounts $*
+../request.sh POST accounts "$@"

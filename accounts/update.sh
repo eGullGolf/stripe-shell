@@ -21,4 +21,4 @@ then
 fi
 
 shift 1
-../request.sh POST "accounts/$stripeAccountId" $*
+../request.sh POST "accounts/$stripeAccountId" "$@"

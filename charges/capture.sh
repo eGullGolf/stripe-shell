@@ -20,4 +20,4 @@ then
 fi
 
 shift 1
-../request.sh 'POST' "charges/$stripeChargeId/capture" $*
+../request.sh 'POST' "charges/$stripeChargeId/capture" "$@"

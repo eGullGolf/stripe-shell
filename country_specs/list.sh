@@ -10,4 +10,4 @@
 #
 cd "$(dirname "$0")"
 
-../request.sh GET country_specs $*
+../request.sh GET country_specs "$@"

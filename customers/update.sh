@@ -20,4 +20,4 @@ then
 fi
 
 shift 1
-../request.sh POST "customers/$stripeCustomerId" $*
+../request.sh POST "customers/$stripeCustomerId" "$@"

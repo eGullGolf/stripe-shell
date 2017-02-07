@@ -16,4 +16,4 @@
 #
 cd "$(dirname "$0")"
 
-../request.sh POST transfers $*
+../request.sh POST transfers "$@"

@@ -10,4 +10,4 @@
 #
 cd "$(dirname "$0")"
 
-../request.sh GET accounts
+../request.sh GET accounts "$@"

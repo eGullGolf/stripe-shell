@@ -18,4 +18,4 @@
 #
 cd "$(dirname "$0")"
 
-../request.sh POST charges $*
+../request.sh POST charges "$@"

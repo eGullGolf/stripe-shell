@@ -45,8 +45,8 @@ stripeApiBaseUrl='https://api.stripe.com/v1'
   fi
 
   shift 2
-  for stripeKeyValue in $*
+  for stripeKeyValue
   do
-    echo "-d $stripeKeyValue"
+    echo "-d \"$stripeKeyValue\""
   done
 } | xargs curl --silent --show-error --request "$httpMethod"

@@ -23,6 +23,7 @@ fi
 printf '%s' 'https://connect.stripe.com/oauth/authorize'
 printf '%s' "?client_id=$stripeConnectClientId"
 printf '%s' '&response_type=code'
+printf '%s' '&scope=read_write'
 for stripeKeyValue in $*
 do
   printf '%s' "&$stripeKeyValue"

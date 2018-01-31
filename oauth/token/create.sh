@@ -50,4 +50,5 @@ fi
   done
 } | xargs curl --silent --show-error \
   'https://connect.stripe.com/oauth/token' \
-  -d client_secret="$stripeSecretKey"
+  -d client_secret="$stripeSecretKey" \
+  -d grant_type=authorization_code

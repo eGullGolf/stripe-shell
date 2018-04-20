@@ -1,2 +1,2 @@
-# ignore custom configuration file
-config.my.sh
+# ignore custom configuration files
+config.my.*sh

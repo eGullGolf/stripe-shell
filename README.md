@@ -32,24 +32,6 @@ It starts with the prefix `ca_` and can be found in the section "Client IDs"
 of the page Connect > Settings. A different identifier is provided for the
 live API ("Live mode client ID") and the test API ("Test mode client ID").
 
-Using the `Stripe-Account` header, a platform account can send requests on
-behalf of a connected account, as described in
-[Authentication with Connect](https://stripe.com/docs/connect/authentication).
-
-The account identifier of each connected account can be found in the dashboard
-of the platform account in the page Connect > Accounts.
-
-The value of the `Stripe-Account` header can be provided to this API by setting
-the environment variable `stripeConnectAs`, as seen in the example below:
-
-```
-# events of the account acct_...
-stripeConnectAs='acct_...' events/list.sh
-
-# events of the platform account
-events/list.sh
-```
-
 # Requirements
 
 This software uses [cUrl](https://curl.haxx.se/) utility to issue requests.
@@ -93,6 +75,26 @@ $ ./balance/read.sh
 ```
 
 Arguments for the API endpoint are provided in the same format in both cases.
+
+# Stripe Connect Usage
+
+Using the `Stripe-Account` header, a platform account can send requests on
+behalf of a connected account, as described in
+[Authentication with Connect](https://stripe.com/docs/connect/authentication).
+
+The account identifier of each connected account can be found in the dashboard
+of the platform account in the page Connect > Accounts.
+
+The value of the `Stripe-Account` header can be provided to this API by setting
+the environment variable `stripeConnectAs`, as seen in the example below:
+
+```
+# events of the account acct_...
+stripeConnectAs='acct_...' ./events/list.sh
+
+# events of the platform account
+./events/list.sh
+```
 
 ## License
 

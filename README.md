@@ -50,6 +50,9 @@ The script takes as input two parameters or more:
 * optionally, a list of parameters for the API endpoint,
   of the form name='value', where the value is URL-encoded
 
+The format of "dictionary" parameters is `parameter[child]=value`,
+for example `created[gt]=1483356173`.
+
 Alternatively, specific scripts are available for select endpoints,
 where the folder name matches the name of the endpoint, and the
 script name reflects the nature of the operation:

@@ -6,6 +6,7 @@
 #
 # Reference:
 # [1] Stripe API > Connect > Account > Retrieve account details
+# https://stripe.com/docs/api#retrieve_account
 #
 cd "$(dirname "$0")"
 

@@ -3,6 +3,7 @@
 #
 # Parameters:
 #   $1 - string, name of the HTTP method: 'GET', 'POST', 'DELETE',...
+#        or 'FILE' to upload a file as multipart/form-data
 #   $2 - string, name of the API end-point
 #   ... - API parameters in the form name='value',
 #         where the value is URL-encoded and quoted if needed for safety
@@ -33,7 +34,20 @@ then
   exit 2
 fi
 
-stripeApiBaseUrl='https://api.stripe.com/v1'
+if test "$stripeApiName" = 'files'
+then
+  stripeApiBaseUrl='https://files.stripe.com/v1'
+else
+  stripeApiBaseUrl='https://api.stripe.com/v1'
+fi
+
+if test "$httpMethod" = 'FILE'
+then
+  httpMethod='POST'
+  field='--form'
+else
+  field='--data'
+fi
 
 {
   echo "$stripeApiBaseUrl/$stripeApiName"
@@ -47,6 +61,6 @@ stripeApiBaseUrl='https://api.stripe.com/v1'
   shift 2
   for stripeKeyValue
   do
-    echo "-d \"$stripeKeyValue\""
+    echo "$field \"$stripeKeyValue\""
   done
 } | xargs curl --silent --show-error --request "$httpMethod"
